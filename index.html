@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Felipe Silva | Desenvolvedor Web</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- ICONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/projetos.css">
+<link rel="stylesheet" href="css/sobre.css">
+<link rel="stylesheet" href="css/contato.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h2 class="logo">&lt;LipeDev/&gt;</h2>
+
+  <nav class="nav" id="nav">
+    <ul class="menu-links">
+      <li><a href="#home" class="active">Início</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-left">
+    <h1>
+      Olá, eu sou<br>
+      <span id="digitando"></span><span class="cursor">|</span>
+    </h1>
+
+    <h3>Desenvolvedor Web Frontend</h3>
+
+    <p>
+      Desenvolvedor focado em criar interfaces modernas,
+      responsivas e bem estruturadas, seguindo boas práticas
+      e sempre evoluindo.
+    </p>
+
+    <div class="techs">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+    </div>
+
+    <div class="social">
+      <a href="https://github.com/Lipe9" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="home-right">
+    <img src="img/a13ca7b0e467470eb0a7c92e07a48180.jpg" alt="Felipe Silva">
+  </div>
+</section>
+
+<section id="projetos">
+  <h2 class="section-title">Projetos</h2>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>Portfólio</h3>
+      <p>Site pessoal profissional.</p>
+      <span>HTML • CSS • JS</span>
+      <a href="#">Ver projeto</a>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2 class="section-title">Sobre</h2>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>Formação</h3>
+      <p>Desenvolvimento de Sistemas</p>
+    </div>
+    <div class="card reveal">
+      <h3>Habilidades</h3>
+      <p>Frontend • UI • Responsivo</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2 class="section-title">Contato</h2>
+  <form class="reveal">
+    <input type="text" placeholder="Seu nome">
+    <input type="email" placeholder="Seu email">
+    <textarea placeholder="Mensagem"></textarea>
+    <button>Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Felipe Silva</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

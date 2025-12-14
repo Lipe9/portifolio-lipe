@@ -1,0 +1,285 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(180deg,#0b0b0b,#0f1a14);
+  color:#f1f1f1;
+}
+.header{
+  position:fixed;
+  top:0;
+  width: 100%;
+  height:80px;
+  padding: 0 40px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(8px);
+  z-index:2000;
+  border-radius: 0 0 15px 15px;
+  border-bottom: 2px solid #3fa66a;
+}
+
+.logo{
+  color: #3fa66a;
+  font-size: 1.6rem;
+  font-family: 'Space Grotesk',sans-serif;
+  text-shadow: 2px 1px 20px #3fa66a;
+}
+.nav{
+  display: flex;
+}
+
+.menu-links{
+  display:flex;
+  gap:35px;
+  list-style:none;
+}
+
+.menu-links a{
+  position:relative;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1rem;
+  font-weight:600;
+  color:#eaeaea;
+  text-decoration:none;
+  padding:5px 0;
+  transition:.3s;
+}
+
+/* LINHA ANIMADA */
+.menu-links a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom: 3px;
+  width:0;
+  height:2px;
+  background:#3fa66a;
+  transition: 0.3s;
+}
+
+.menu-links a:hover::after,
+.menu-links a.active::after{
+  width:100%;
+}
+.hamburger{
+  display:none;
+  background:none;
+  border:none;
+  cursor:pointer;
+  z-index:2100;
+}
+
+.hamburger span{
+  display:block;
+  width:28px;
+  height:3px;
+  margin:6px 0;
+  background:#3fa66a;
+  border-radius:4px;
+  transition:.4s;
+}
+
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg) translate(6px,6px);
+}
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg) translate(7px,-7px);
+}
+.section-title{
+  text-align:center;
+  color:#3fa66a;
+  margin-bottom:50px;
+  font-size:2rem;
+}
+#home{
+  min-height:calc(110vh - 80px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 100px 10%;
+  background-image: url(../img/fundo3.jpg);
+  background-size: cover;
+}
+
+.home-left{max-width:550px}
+.home-left h1{font-size:3rem}
+.home-left h3{margin:15px 0;color:#3fa66a}
+.home-left p{margin-bottom:20px;opacity:.9}
+
+.techs span{
+  display:inline-block;
+  margin:5px 8px 15px 0;
+  padding:6px 14px;
+  border:1px solid #3fa66a;
+  border-radius:20px;
+  font-size:.85rem;
+}
+
+.social a{
+  font-size:1.5rem;
+  margin-right:15px;
+  color:#3fa66a;
+}
+
+.home-right img{
+  width:300px;
+  border-radius:20px;
+  border:2px solid #3fa66a;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#0f1a14;
+  padding:25px;
+  border-radius:15px;
+  border:1px solid #2f6f4e;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card span{
+  display:block;
+  margin:10px 0;
+  color:#3fa66a;
+  font-size:.9rem;
+}
+
+.card a{
+  color:#3fa66a;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* FORM */
+form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input,textarea{
+  padding:12px;
+  border-radius:8px;
+  border:none;
+}
+
+button{
+  background:#3fa66a;
+  border:none;
+  padding:12px;
+  border-radius:8px;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  text-align:center;
+  padding:20px;
+  font-size:.9rem;
+}
+
+/* ANIMAÇÕES */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+.cursor{
+  animation:blink 1s infinite;
+  color:#3fa66a;
+}
+
+@keyframes blink{
+  50%{opacity:0}
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* HEADER FIXO */
+  .header{
+    z-index:3000;
+  }
+
+  /* MENU OVERLAY */
+  .nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.98);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transform:translateX(100%);
+    transition:transform .45s ease;
+
+    z-index:2500;
+  }
+
+  .nav.active{
+    transform:translateX(0);
+  }
+
+  .menu-links{
+    flex-direction:column;
+    gap:40px;
+  }
+
+  .menu-links a{
+    font-size:1.8rem;
+    font-weight:700;
+  }
+
+  /* BOTÃO HAMBURGER */
+  .hamburger{
+    display:block;
+    position:relative;
+    z-index:3001;
+  }
+
+  /* HOME MOBILE */
+  #home{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .home-right img{
+    margin-top:30px;
+  }
+}
+body.menu-open{
+  overflow:hidden;
+  height:100vh;
+}

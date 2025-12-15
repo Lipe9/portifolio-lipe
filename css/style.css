@@ -279,7 +279,7 @@ display: flex;
   .home-right img{
     margin-top: 10px;
 position: relative;
-    bottom: 30px;
+    bottom: 100px;
   }
 }
 body.menu-open{

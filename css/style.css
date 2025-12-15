@@ -273,10 +273,13 @@ footer{
   #home{
     flex-direction:column;
     text-align:center;
+display: flex;
   }
 
   .home-right img{
     margin-top: 10px;
+position: relative;
+    bottom: 30px;
   }
 }
 body.menu-open{

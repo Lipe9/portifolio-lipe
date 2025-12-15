@@ -275,10 +275,9 @@ footer{
     text-align:center;
   }
 
-  .home-right img{
+  .home-right{
     margin-top: 320px;
 padding: 0 25px;
-pa
   }
 }
 body.menu-open{
